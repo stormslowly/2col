@@ -1,12 +1,21 @@
 import Link from 'next/link'
-import React, {Component} from 'react'
+import * as React from 'react'
 
-class TwoColumn extends Component {
+class TwoColumn extends React.Component {
 
 
     render() {
         return '2col'
     }
+}
+
+type ToCompare = { left: string, right: string }
+
+const Compare: React.StatelessComponent<ToCompare> = ({left, right}: ToCompare) => {
+    return <div className="flex">
+        <div>{left}</div>
+        <div>{right}</div>
+    </div>
 }
 
 
@@ -17,13 +26,11 @@ export default () =>
             <a>About</a>
         </Link>
 
-        <div>
-
-            <TwoColumn>
-
-            </TwoColumn>
-
+        <div style={{width:'800px', border:'1px solid black'}}>
+            <Compare left={'text'} right={'test'}/>
         </div>
     </div>
+
+
 
 
