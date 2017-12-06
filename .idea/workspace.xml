@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5d19a1e6-ba7c-45de-88a3-0fc08d7a8263" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/pages/_document.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pages/index.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/test/lexer.ts" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change beforePath="$PROJECT_DIR$/pages/index.tsx" afterPath="$PROJECT_DIR$/pages/index.tsx" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" afterPath="$PROJECT_DIR$/yarn.lock" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -20,12 +19,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.tsx" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pages/index.tsx">
+      <file leaf-file-name="lexer.ts" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/lexer.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="536">
-              <caret line="33" column="14" lean-forward="true" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="14" />
-              <folding />
+            <state relative-caret-position="672">
+              <caret line="32" column="7" lean-forward="true" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="7" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -35,10 +36,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript File" />
         <option value="tsconfig.json" />
         <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -64,6 +65,7 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/gulpfile.js" />
         <option value="$PROJECT_DIR$/pages/index.tsx" />
+        <option value="$PROJECT_DIR$/test/lexer.ts" />
       </list>
     </option>
   </component>
@@ -110,18 +112,31 @@
             <path>
               <item name="2Col" type="b2602c69:ProjectViewProjectNode" />
               <item name="2Col" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="2Col" type="b2602c69:ProjectViewProjectNode" />
               <item name="2Col" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
+              <item name="@types" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="2Col" type="b2602c69:ProjectViewProjectNode" />
               <item name="2Col" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
+              <item name="@types" type="462c0819:PsiDirectoryNode" />
+              <item name="marked" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="2Col" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2Col" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="2Col" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2Col" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="lexer.ts" type="620a8d5e:NestingTreeNode" />
             </path>
           </expand>
           <select />
@@ -136,6 +151,8 @@
     <property name="SearchEverywhereHistoryKey" value="index&#9;FILE&#9;file:///Volumes/large/git/2Col/pages/index.tsx&#10;pac&#9;FILE&#9;file:///Volumes/large/git/2Col/package.json&#10;ind&#9;FILE&#9;file:///Volumes/large/git/2Col/pages/index.tsx" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs.mocha.mocha_node_package_dir" value="$PROJECT_DIR$/node_modules/mocha" />
+    <property name="javascript.karma.karma_node_package_dir" value="" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -148,6 +165,72 @@
         </RuleState>
       </list>
     </option>
+  </component>
+  <component name="RunManager" selected="Mocha.marked lexer">
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory />
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui />
+      <extra-mocha-options>--opts test/mocha.opts</extra-mocha-options>
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory>test</test-directory>
+      <recursive>true</recursive>
+    </configuration>
+    <configuration name="marked lexer" type="mocha-javascript-test-runner" factoryName="Mocha" temporary="true" nameIsGenerated="true">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory>$PROJECT_DIR$</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui>bdd</ui>
+      <extra-mocha-options>--opts test/mocha.opts</extra-mocha-options>
+      <test-kind>SUITE</test-kind>
+      <test-file>$PROJECT_DIR$/test/lexer.ts</test-file>
+      <test-names>
+        <name value="marked lexer" />
+      </test-names>
+    </configuration>
+    <configuration name="marked lexer.should work" type="mocha-javascript-test-runner" factoryName="Mocha" temporary="true" nameIsGenerated="true">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory>$PROJECT_DIR$</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui>bdd</ui>
+      <extra-mocha-options>--require ts-node/register</extra-mocha-options>
+      <test-kind>TEST</test-kind>
+      <test-file>$PROJECT_DIR$/test/lexer.ts</test-file>
+      <test-names>
+        <name value="marked lexer" />
+        <name value="should work" />
+      </test-names>
+    </configuration>
+    <configuration name="test" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory>$PROJECT_DIR$</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui>bdd</ui>
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory>test</test-directory>
+      <recursive>true</recursive>
+    </configuration>
+    <list size="3">
+      <item index="0" class="java.lang.String" itemvalue="Mocha.test" />
+      <item index="1" class="java.lang.String" itemvalue="Mocha.marked lexer.should work" />
+      <item index="2" class="java.lang.String" itemvalue="Mocha.marked lexer" />
+    </list>
+    <recent_temporary>
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="Mocha.marked lexer" />
+        <item index="1" class="java.lang.String" itemvalue="Mocha.marked lexer.should work" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -163,12 +246,44 @@
       <option name="presentableId" value="Default" />
       <updated>1512120914370</updated>
       <workItem from="1512120915932" duration="885000" />
-      <workItem from="1512548190694" duration="3589000" />
+      <workItem from="1512548190694" duration="5103000" />
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="marked_lexer - 2017.12.06 at 17h 40m 00s.xml">
+      <configuration name="marked lexer" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="marked_lexer - 2017.12.06 at 17h 40m 35s.xml">
+      <configuration name="marked lexer" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="marked_lexer - 2017.12.06 at 17h 41m 52s.xml">
+      <configuration name="marked lexer" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="marked_lexer - 2017.12.06 at 17h 42m 34s.xml">
+      <configuration name="marked lexer" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="marked_lexer - 2017.12.06 at 17h 42m 55s.xml">
+      <configuration name="marked lexer" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="marked_lexer - 2017.12.06 at 17h 51m 46s.xml">
+      <configuration name="marked lexer" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="marked_lexer - 2017.12.06 at 17h 52m 33s.xml">
+      <configuration name="marked lexer" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="marked_lexer - 2017.12.06 at 17h 52m 58s.xml">
+      <configuration name="marked lexer" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="marked_lexer_should_work - 2017.12.06 at 17h 38m 01s.xml">
+      <configuration name="marked lexer.should work" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="marked_lexer_should_work - 2017.12.06 at 17h 39m 24s.xml">
+      <configuration name="marked lexer.should work" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4474000" />
+    <option name="totallyTimeSpent" value="5988000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="140" y="23" width="1591" height="933" extended-state="0" />
@@ -177,7 +292,7 @@
       <window_info id="Key Promoter X" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293556" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -202,6 +317,7 @@
       <list>
         <option value="$PROJECT_DIR$/pages/about.js" />
         <option value="$PROJECT_DIR$/pages/index.js" />
+        <option value="$PROJECT_DIR$/test/lexer.js" />
       </list>
     </option>
   </component>
@@ -209,7 +325,9 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
@@ -263,9 +381,43 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/index.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="536">
-          <caret line="33" column="14" lean-forward="true" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="14" />
+        <state relative-caret-position="840">
+          <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/mocha.opts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.es6.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="1147" column="4" lean-forward="false" selection-start-line="1147" selection-start-column="4" selection-end-line="1147" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/@types/marked/index.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="104" column="9" lean-forward="false" selection-start-line="104" selection-start-column="9" selection-end-line="104" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/lexer.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="672">
+          <caret line="32" column="7" lean-forward="true" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
