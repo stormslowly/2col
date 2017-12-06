@@ -63,6 +63,10 @@
     lodash "^4.17.4"
     pify "^3.0.0"
 
+"@types/marked@^0.3.0":
+  version "0.3.0"
+  resolved "http://registry.npm.taobao.org/@types/marked/download/@types/marked-0.3.0.tgz#583c223dd33385a1dda01aaf77b0cd0411c4b524"
+
 "@types/node@8.0.51":
   version "8.0.51"
   resolved "http://registry.npm.taobao.org/@types/node/download/@types/node-8.0.51.tgz#b31d716fb8d58eeb95c068a039b9b6292817d5fb"
