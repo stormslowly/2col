@@ -54,17 +54,32 @@ export class TwoColArticle {
   private links: Links;
 
   constructor(md: string) {
-    console.log(`${__filename}:57 constructor`);
     const tokensList: TokensList = Marked.lexer(md)
-
     this.links = tokensList.links
+    this.mySegments = this.mergeSegment(tokensList)
+  }
 
-    const tokens: Token[] = tokensList
-    const ss: Segment[] = tokens
+  private mergeSegment(tokens: Token[]) {
 
-    console.log(`${__filename}:64 constructor`, tokens);
+    const ss: Segment[] = []
 
-    this.mySegments = ss
+    const nTokens = tokens.length
+    let i = 0
+    while (i < nTokens) {
+
+      const currentToken = tokens[i]
+      const nextToken = tokens[i + 1]
+
+      if (nextToken && nextToken.type === "code" && currentToken.type === 'code') {
+
+        ss.push([currentToken, nextToken])
+        i += 2
+      } else {
+        ss.push(currentToken)
+        i += 1
+      }
+    }
+    return ss
   }
 
   get segments(): Segment[] {
