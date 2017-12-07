@@ -90,11 +90,19 @@ export class TwoColArticle {
     return this.myLinks
   }
 
-  static renderTokenToRawHtml(tokens: Token, links: Links): string {
-    const toRender: TokensList = [tokens] as TokensList
+  static renderTokenToRawHtml(token: Token, links: Links): string {
+    const toRender: TokensList = [token] as TokensList
     toRender.links = links
 
     return Marked.parser(toRender)
   }
+
+  static renderTokensToRawHtml(tokens: Token[], links: Links): string {
+    const toRender: TokensList = tokens as TokensList
+    toRender.links = links
+
+    return Marked.parser(toRender)
+  }
+
 }
 

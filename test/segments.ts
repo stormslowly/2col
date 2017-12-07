@@ -36,4 +36,10 @@ describe('2col article segments', () => {
     const article = new TwoColArticle('```Python\nprint\n```\na paragraph\n```JavaScript\nconsole.log\n```')
     expect(article.segments).to.have.length(3)
   })
+
+  it('> text', () => {
+    const article = new TwoColArticle('> text')
+    console.log(`${__filename}:42 `, article.segments);
+    expect(article.segments).to.have.length(3)
+  })
 })
