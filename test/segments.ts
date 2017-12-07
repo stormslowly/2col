@@ -33,9 +33,7 @@ describe('2col article segments', () => {
   })
 
   it('1 code + 1p + 1c => 3 segment', () => {
-    const article = new TwoColArticle('```Python\nprint\n```\n```JavaScript\nconsole.log\n```')
-    expect(article.segments).to.have.length(1)
+    const article = new TwoColArticle('```Python\nprint\n```\na paragraph\n```JavaScript\nconsole.log\n```')
+    expect(article.segments).to.have.length(3)
   })
-
-
 })

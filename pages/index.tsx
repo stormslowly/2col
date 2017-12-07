@@ -1,35 +1,43 @@
 import Link from 'next/link'
 import * as React from 'react'
-import * as Marked from 'marked'
-import {Token, TokensList} from "marked";
 
-class TwoColumn extends React.Component {
+import {Token, Tokens} from "marked";
+import {Links, Segment, TwoColArticle} from "../src/TwoColArticle";
 
-
-    render() {
-        return '2col'
-    }
-}
-
-type ToCompare = { left: string, right: string }
+type ToCompare = { left: string, right: string, leftLang?: string, rightLang?: string }
 //      style={{overflowWrap: "break-word"}}
 
-const Compare: React.StatelessComponent<ToCompare> = ({left, right}: ToCompare) => {
-    return <div className="flex border-b-2">
-        <div className="w-1/2">{left}</div>
-        <div className="w-1/2">
-            <p style={{overflowWrap: "break-word"}}>
-                {right}
-            </p>
-        </div>
+const Compare: React.StatelessComponent<ToCompare> = ({left, right, leftLang, rightLang}: ToCompare) => {
+  return <div className="flex border-b-2">
+    <div
+      className="w-1/2 relative"
+    >
+
+      <span
+        className="absolute pin-l pin-t bg-teal-dark rounded-full px-2"
+      >
+        {leftLang}
+        </span>
+      <div className="pt-6 pb-3 bg-grey"
+           dangerouslySetInnerHTML={{__html: left}}
+      ></div>
+
     </div>
+    <div className="w-1/2 relative">
+      <span
+        className="absolute pin-l pin-t bg-teal-dark rounded-full px-2"
+      >{rightLang}</span>
+      <div className="pt-6 pb-3 bg-grey"
+           dangerouslySetInnerHTML={{__html: right}}></div>
+    </div>
+  </div>
 }
 
 
 const md2ColArticle = `
 # test
 
-this is a desc \`js\` and \`java\`
+this is a desc \`js\` and \`Python\`
 
 # 输出 hello world
 
@@ -37,86 +45,59 @@ this is a desc \`js\` and \`java\`
 console.log('hello world')
 \`\`\`
 
-\`\`\`python
+\`\`\`Python
 print( 'hello world')
 \`\`\`
+
+现在大家学会各种 hello world 了吧
 `
 
-type CodeToCompare = [Token, Token]
-
-type Segment = CodeToCompare | Token
-
-function isCodeToCompare(object: any): object is CodeToCompare {
-    return Array.isArray(object)
-}
-
-const SegmentContainer = ({content}: { content: CodeToCompare | TokensList }) => {
-    if (isCodeToCompare(content)) {
+type CodeToCompare = [Tokens.Code, Tokens.Code]
 
 
-    }
+function isCodeToCompare(object: Segment): object is CodeToCompare {
+  return Array.isArray(object)
 }
 
 
-const NullSegment = {
-    type: 'null'
-}
+const SegmentContainer = ({segment, links}: { segment: Segment, links: Links }) => {
+  if (isCodeToCompare(segment)) {
+    const [left, right] = segment
 
-function toSegments(md: string): {
-    segments: Segment[], links: {
-        [key: string]: { href: string; title: string; }
-    }
-} {
+    return <Compare
+      left={TwoColArticle.renderTokenToRawHtml(left, links)}
+      leftLang={'JavaScript'}
 
-    const tokenList: TokensList = Marked.lexer(md)
-    const links = tokenList.links
-
-    const tokens: Token[] = tokenList
-    const ss: Segment[] = []
-
-    let lastSegment = tokens[0]
-
-    for (let i = 1; i < tokens.length - 1;) {
-        const token = tokens[i]
-
-        if (token.type === 'code' && lastSegment.type === 'code') {
-            ss.push([lastSegment, token])
-            lastSegment = NullSegment as Token
-            i++
-        } else {
-            ss.push(lastSegment)
-            lastSegment = token
-            i++
-        }
-    }
-
-
-    return {segments: ss, links}
+      right={TwoColArticle.renderTokenToRawHtml(right, links)}
+      rightLang={right.lang}
+    />
+  } else {
+    return <div dangerouslySetInnerHTML={{__html: TwoColArticle.renderTokenToRawHtml(segment, links)}}></div>
+  }
 }
 
 
-const TwoCol = ({md}: { md: string }) => {
+const Article = ({md}: { md: string }) => {
 
-    const tokenList: TokensList = Marked.lexer(md)
+  const tca = new TwoColArticle(md)
 
-
-    return <div className="post">
-        {JSON.stringify(tokenList[0])}
-    </div>
+  return <div className="post">
+    {tca.segments.map((seg, i) => <SegmentContainer
+      segment={seg}
+      links={tca.links}
+      key={i}/>)}
+  </div>
 }
 
 
 export default () =>
-    <div className="container">
-        <Link href="/about">
-            <a>About</a>
-        </Link>
-        <h1>开始对比</h1>
+  <div className="site">
+    <Link href="/about">
+      <a>About</a>
+    </Link>
+    <h1>开始对比</h1>
 
-        <TwoCol md={md2ColArticle}/>
+    <Article md={md2ColArticle}/>
 
-    </div>
-
-
-
+  </div>
 

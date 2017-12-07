@@ -1,16 +1,16 @@
-import {Token, TokensList} from "marked";
+import {Token, Tokens, TokensList} from "marked";
 import * as Marked from "marked";
 
 
-type CodeToCompare = [Token, Token]
+type CodeToCompare = [Tokens.Code, Tokens.Code]
 
-type Segment = CodeToCompare | Token
+export type Segment = CodeToCompare | Token
 
 const NullSegment = {
   type: 'null'
 }
 
-type Links = {
+export type Links = {
   [key: string]: { href: string; title: string; }
 }
 
@@ -51,11 +51,11 @@ function toSegments(md: string): {
 export class TwoColArticle {
 
   private mySegments: Segment[] = []
-  private links: Links;
+  private myLinks: Links;
 
   constructor(md: string) {
     const tokensList: TokensList = Marked.lexer(md)
-    this.links = tokensList.links
+    this.myLinks = tokensList.links
     this.mySegments = this.mergeSegment(tokensList)
   }
 
@@ -84,6 +84,17 @@ export class TwoColArticle {
 
   get segments(): Segment[] {
     return this.mySegments
+  }
+
+  get links() {
+    return this.myLinks
+  }
+
+  static renderTokenToRawHtml(tokens: Token, links: Links): string {
+    const toRender: TokensList = [tokens] as TokensList
+    toRender.links = links
+
+    return Marked.parser(toRender)
   }
 }
 
