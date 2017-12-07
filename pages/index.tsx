@@ -1,5 +1,7 @@
 import Link from 'next/link'
 import * as React from 'react'
+import * as Marked from 'marked'
+import {Token, TokensList} from "marked";
 
 class TwoColumn extends React.Component {
 
@@ -24,20 +26,95 @@ const Compare: React.StatelessComponent<ToCompare> = ({left, right}: ToCompare) 
 }
 
 
+const md2ColArticle = `
+# test
+
+this is a desc \`js\` and \`java\`
+
+# 输出 hello world
+
+\`\`\`JavaScript
+console.log('hello world')
+\`\`\`
+
+\`\`\`python
+print( 'hello world')
+\`\`\`
+`
+
+type CodeToCompare = [Token, Token]
+
+type Segment = CodeToCompare | Token
+
+function isCodeToCompare(object: any): object is CodeToCompare {
+    return Array.isArray(object)
+}
+
+const SegmentContainer = ({content}: { content: CodeToCompare | TokensList }) => {
+    if (isCodeToCompare(content)) {
+
+
+    }
+}
+
+
+const NullSegment = {
+    type: 'null'
+}
+
+function toSegments(md: string): {
+    segments: Segment[], links: {
+        [key: string]: { href: string; title: string; }
+    }
+} {
+
+    const tokenList: TokensList = Marked.lexer(md)
+    const links = tokenList.links
+
+    const tokens: Token[] = tokenList
+    const ss: Segment[] = []
+
+    let lastSegment = tokens[0]
+
+    for (let i = 1; i < tokens.length - 1;) {
+        const token = tokens[i]
+
+        if (token.type === 'code' && lastSegment.type === 'code') {
+            ss.push([lastSegment, token])
+            lastSegment = NullSegment as Token
+            i++
+        } else {
+            ss.push(lastSegment)
+            lastSegment = token
+            i++
+        }
+    }
+
+
+    return {segments: ss, links}
+}
+
+
+const TwoCol = ({md}: { md: string }) => {
+
+    const tokenList: TokensList = Marked.lexer(md)
+
+
+    return <div className="post">
+        {JSON.stringify(tokenList[0])}
+    </div>
+}
+
+
 export default () =>
-    <div>
-        let's do it
+    <div className="container">
         <Link href="/about">
             <a>About</a>
         </Link>
         <h1>开始对比</h1>
-        <div className="container mx-auto border-l-2 border-r-2" >
-            <Compare left={'npm init'} right={'maven stat'}/>
-            <h2>一些描述</h2>
-            <p className="">
-                some description
-            </p>
-        </div>
+
+        <TwoCol md={md2ColArticle}/>
+
     </div>
 
 

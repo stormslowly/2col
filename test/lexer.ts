@@ -9,12 +9,14 @@ describe('marked lexer', () => {
 
 this is a desc \`js\` and \`java\`
 
+# 输出 hello world
+
 \`\`\`JavaScript
-console.log('test')
+console.log('hello world')
 \`\`\`
 
-\`\`\`java
-print 'test'
+\`\`\`python
+print( 'hello world')
 \`\`\`
 `
 
@@ -22,11 +24,11 @@ print 'test'
     it('should work', function () {
         console.log(marked.lexer(md))
 
-        const tokenlist: TokensList = marked.lexer(md)
+        const tokensList: TokensList = marked.lexer(md)
 
-        const links = tokenlist.links
+        const links = tokensList.links
 
-        const tokens: TokensList = tokenlist.slice(0, 1) as TokensList
+        const tokens: TokensList = tokensList.slice(0, 1) as TokensList
         tokens.links = links
 
         console.log(`${__filename}:26 `, marked.parser(tokens));

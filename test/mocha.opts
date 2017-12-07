@@ -1,1 +1,1 @@
---compilers  ts:ts-node/register  --recursive
+--require  ts-node/register  --recursive
