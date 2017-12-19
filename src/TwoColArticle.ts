@@ -27,8 +27,6 @@ export class TwoColArticle {
   constructor(md: string) {
     const tokensList: TokensList = Marked.lexer(md)
     this.myLinks = tokensList.links
-
-    console.log(`${__filename}:31 constructor`, tokensList);
     this.mySegments = this.mergeSegment(tokensList)
   }
 

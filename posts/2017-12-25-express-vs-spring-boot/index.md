@@ -3,14 +3,8 @@ path: "/happy-halloween"
 date: "2017-10-31T03:15:59.175Z"
 title: "Happy Halloween"
 tags: ['node.js', 'python']
-excerpt: "Great Pumpkin, or Greatest Pumpkin?"
+excerpt: "a simple example show how 2col works"
 ---
-
-# ARRRROOOOOOOOO
-
-It was a clear black night, a clear white moon...
-
-
 # test
 learn js by python  or learn python by js
 

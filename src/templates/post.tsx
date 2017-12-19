@@ -55,11 +55,7 @@ const SegmentContainer = ({segment, links}: { segment: Segment, links: Links }) 
 
 
 const Article = ({md}: { md: string }) => {
-
   const tca = new TwoColArticle(md)
-
-  console.log(`${__filename}:114 Article`, tca.segments);
-
   return <div className="post">
     {tca.segments.map((seg, i) => <SegmentContainer
       segment={seg}
@@ -88,12 +84,9 @@ export const pageQuery = graphql`
 
 
 export default (props) => {
-
   const {data, location} = props
   const {markdownRemark: post} = data
   const {frontmatter, internal: {content}} = post
-
-  console.log(content.replace(/---\n[\w\W]+---/, ''))
 
   return <div className="site">
     <Link to="/about">
