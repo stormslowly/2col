@@ -1,8 +1,7 @@
-import Link from 'next/link'
+import Link from "gatsby-link"
 import * as React from 'react'
 
-import {Token, Tokens} from "marked";
-import {CompareSegment, Links, Segment, TwoColArticle} from "../src/TwoColArticle";
+import {CompareSegment, Links, Segment, TwoColArticle} from "../TwoColArticle";
 
 type ToCompare = { left: string, right: string, leftLang?: string, rightLang?: string }
 //      style={{overflowWrap: "break-word"}}
@@ -34,13 +33,9 @@ const Compare: React.StatelessComponent<ToCompare> = ({left, right, leftLang, ri
 }
 
 
-const md2ColArticle = `
-# test
-
-learn js by python  or learn python by js
-
+// language=Markdown
+const md2ColArticle = `# test\nlearn js by python  or learn python by js
 # 输出 hello world
-
 \`\`\`JavaScript
 console.log('hello world')
 \`\`\`
@@ -72,7 +67,6 @@ array = []
 for(let item of array){
 	console.log(item)
 }
-
 \`\`\`
 
 \`\`\`Python
@@ -81,9 +75,9 @@ for item in array:
 	print(item)
 \`\`\`
 
-> 牛顿说 我站在巨人的肩膀上尿尿呢!
-
 `
+
+console.log(`${__filename}:84 \n`, md2ColArticle);
 
 function isCodeToCompare(object: Segment): object is CompareSegment {
   return object.type === 'compare'
@@ -96,7 +90,7 @@ const SegmentContainer = ({segment, links}: { segment: Segment, links: Links }) 
 
     return <Compare
       left={TwoColArticle.renderTokenToRawHtml(left, links)}
-      leftLang={'JavaScript'}
+      leftLang={left.lang}
 
       right={TwoColArticle.renderTokenToRawHtml(right, links)}
       rightLang={right.lang}
@@ -111,8 +105,10 @@ const Article = ({md}: { md: string }) => {
 
   const tca = new TwoColArticle(md)
 
+  console.log(`${__filename}:114 Article`, tca.segments);
+
   return <div className="post">
-    {tca.segments.map((seg, i) => <SegmentContainer
+    {tca.segments.slice(0, 1).map((seg, i) => <SegmentContainer
       segment={seg}
       links={tca.links}
       key={i}/>)}
@@ -122,8 +118,8 @@ const Article = ({md}: { md: string }) => {
 
 export default () =>
   <div className="site">
-    <Link href="/about">
-      <a>About</a>
+    <Link to="/about">
+      About
     </Link>
     <h1>开始对比</h1>
 
