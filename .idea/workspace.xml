@@ -5,6 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/pages/index.tsx" afterPath="$PROJECT_DIR$/pages/index.tsx" />
       <change beforePath="$PROJECT_DIR$/src/TwoColArticle.ts" afterPath="$PROJECT_DIR$/src/TwoColArticle.ts" />
+      <change beforePath="$PROJECT_DIR$/test/lexer.ts" afterPath="$PROJECT_DIR$/test/lexer.ts" />
       <change beforePath="$PROJECT_DIR$/test/segments.ts" afterPath="$PROJECT_DIR$/test/segments.ts" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -16,6 +17,22 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="index.tsx" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pages/index.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="366">
+              <caret line="82" column="0" lean-forward="true" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -33,6 +50,7 @@
       <find>highlighter-rouge</find>
       <find>code</find>
       <find>pre</find>
+      <find>输出 hello world</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -48,15 +66,18 @@
         <option value="$PROJECT_DIR$/tsconfig.json" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/gulpfile.js" />
-        <option value="$PROJECT_DIR$/test/lexer.ts" />
         <option value="$PROJECT_DIR$/tslint.json" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/test/mocha.opts" />
         <option value="$PROJECT_DIR$/pages/_document.js" />
         <option value="$PROJECT_DIR$/style/style.css" />
-        <option value="$PROJECT_DIR$/pages/index.tsx" />
+        <option value="/Markdown Fragment (segments.ts:1061).md" />
+        <option value="/Markdown Fragment (segments.ts:1327).md" />
+        <option value="/Markdown Fragment (segments.ts:1638).md" />
         <option value="$PROJECT_DIR$/test/segments.ts" />
+        <option value="$PROJECT_DIR$/test/lexer.ts" />
         <option value="$PROJECT_DIR$/src/TwoColArticle.ts" />
+        <option value="$PROJECT_DIR$/pages/index.tsx" />
       </list>
     </option>
   </component>
@@ -114,7 +135,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -125,32 +145,13 @@
             <path>
               <item name="2Col" type="b2602c69:ProjectViewProjectNode" />
               <item name="2Col" type="462c0819:PsiDirectoryNode" />
-              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="2Col" type="b2602c69:ProjectViewProjectNode" />
-              <item name="2Col" type="462c0819:PsiDirectoryNode" />
-              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
-              <item name="@types" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="2Col" type="b2602c69:ProjectViewProjectNode" />
-              <item name="2Col" type="462c0819:PsiDirectoryNode" />
-              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
-              <item name="@types" type="462c0819:PsiDirectoryNode" />
-              <item name="marked" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="2Col" type="b2602c69:ProjectViewProjectNode" />
-              <item name="2Col" type="462c0819:PsiDirectoryNode" />
-              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
-              <item name="@types" type="462c0819:PsiDirectoryNode" />
-              <item name="mocha" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="2Col" type="b2602c69:ProjectViewProjectNode" />
               <item name="2Col" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="index.tsx" type="620a8d5e:NestingTreeNode" />
             </path>
             <path>
               <item name="2Col" type="b2602c69:ProjectViewProjectNode" />
@@ -160,18 +161,8 @@
             <path>
               <item name="2Col" type="b2602c69:ProjectViewProjectNode" />
               <item name="2Col" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="2Col" type="b2602c69:ProjectViewProjectNode" />
-              <item name="2Col" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="2Col" type="b2602c69:ProjectViewProjectNode" />
-              <item name="2Col" type="462c0819:PsiDirectoryNode" />
-              <item name="style" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="TwoColArticle.ts" type="620a8d5e:NestingTreeNode" />
             </path>
             <path>
               <item name="2Col" type="b2602c69:ProjectViewProjectNode" />
@@ -182,6 +173,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -206,22 +198,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Mocha.2col article segments.&gt; text">
-    <configuration name="2col article segments" type="mocha-javascript-test-runner" factoryName="Mocha" temporary="true" nameIsGenerated="true">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <working-directory>$PROJECT_DIR$</working-directory>
-      <pass-parent-env>true</pass-parent-env>
-      <envs />
-      <ui>bdd</ui>
-      <extra-mocha-options>--opts test/mocha.opts</extra-mocha-options>
-      <test-kind>SUITE</test-kind>
-      <test-file>$PROJECT_DIR$/test/segments.ts</test-file>
-      <test-names>
-        <name value="2col article segments" />
-      </test-names>
-    </configuration>
-    <configuration name="2col article segments.1 code + 1p + 1c =&gt; 3 segment" type="mocha-javascript-test-runner" factoryName="Mocha" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Mocha.test">
+    <configuration name="2col article segments.2 code segment treat as an segment" type="mocha-javascript-test-runner" factoryName="Mocha" temporary="true" nameIsGenerated="true">
       <node-interpreter>project</node-interpreter>
       <node-options />
       <working-directory>$PROJECT_DIR$</working-directory>
@@ -233,10 +211,10 @@
       <test-file>$PROJECT_DIR$/test/segments.ts</test-file>
       <test-names>
         <name value="2col article segments" />
-        <name value="1 code + 1p + 1c =&gt; 3 segment" />
+        <name value="2 code segment treat as an segment" />
       </test-names>
     </configuration>
-    <configuration name="2col article segments.1 segment article" type="mocha-javascript-test-runner" factoryName="Mocha" temporary="true" nameIsGenerated="true">
+    <configuration name="2col article segments.3 code segment treat as an segment" type="mocha-javascript-test-runner" factoryName="Mocha" temporary="true" nameIsGenerated="true">
       <node-interpreter>project</node-interpreter>
       <node-options />
       <working-directory>$PROJECT_DIR$</working-directory>
@@ -248,7 +226,37 @@
       <test-file>$PROJECT_DIR$/test/segments.ts</test-file>
       <test-names>
         <name value="2col article segments" />
-        <name value="1 segment article" />
+        <name value="3 code segment treat as an segment" />
+      </test-names>
+    </configuration>
+    <configuration name="2col article segments.4 code segment treat as an segment" type="mocha-javascript-test-runner" factoryName="Mocha" temporary="true" nameIsGenerated="true">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory>$PROJECT_DIR$</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui>bdd</ui>
+      <extra-mocha-options>--opts test/mocha.opts</extra-mocha-options>
+      <test-kind>TEST</test-kind>
+      <test-file>$PROJECT_DIR$/test/segments.ts</test-file>
+      <test-names>
+        <name value="2col article segments" />
+        <name value="4 code segment treat as an segment" />
+      </test-names>
+    </configuration>
+    <configuration name="2col article segments.5 code segment treat as an segment" type="mocha-javascript-test-runner" factoryName="Mocha" temporary="true" nameIsGenerated="true">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory>$PROJECT_DIR$</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui>bdd</ui>
+      <extra-mocha-options>--opts test/mocha.opts</extra-mocha-options>
+      <test-kind>TEST</test-kind>
+      <test-file>$PROJECT_DIR$/test/segments.ts</test-file>
+      <test-names>
+        <name value="2col article segments" />
+        <name value="5 code segment treat as an segment" />
       </test-names>
     </configuration>
     <configuration name="2col article segments.&gt; text" type="mocha-javascript-test-runner" factoryName="Mocha" temporary="true" nameIsGenerated="true">
@@ -264,21 +272,6 @@
       <test-names>
         <name value="2col article segments" />
         <name value="&gt; text" />
-      </test-names>
-    </configuration>
-    <configuration name="2col article segments.empty article" type="mocha-javascript-test-runner" factoryName="Mocha" temporary="true" nameIsGenerated="true">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <working-directory>$PROJECT_DIR$</working-directory>
-      <pass-parent-env>true</pass-parent-env>
-      <envs />
-      <ui>bdd</ui>
-      <extra-mocha-options>--opts test/mocha.opts</extra-mocha-options>
-      <test-kind>TEST</test-kind>
-      <test-file>$PROJECT_DIR$/test/segments.ts</test-file>
-      <test-names>
-        <name value="2col article segments" />
-        <name value="empty article" />
       </test-names>
     </configuration>
     <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
@@ -307,19 +300,19 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Mocha.test" />
-      <item index="1" class="java.lang.String" itemvalue="Mocha.2col article segments.empty article" />
-      <item index="2" class="java.lang.String" itemvalue="Mocha.2col article segments.1 segment article" />
-      <item index="3" class="java.lang.String" itemvalue="Mocha.2col article segments" />
-      <item index="4" class="java.lang.String" itemvalue="Mocha.2col article segments.1 code + 1p + 1c =&gt; 3 segment" />
-      <item index="5" class="java.lang.String" itemvalue="Mocha.2col article segments.&gt; text" />
+      <item index="1" class="java.lang.String" itemvalue="Mocha.2col article segments.&gt; text" />
+      <item index="2" class="java.lang.String" itemvalue="Mocha.2col article segments.2 code segment treat as an segment" />
+      <item index="3" class="java.lang.String" itemvalue="Mocha.2col article segments.3 code segment treat as an segment" />
+      <item index="4" class="java.lang.String" itemvalue="Mocha.2col article segments.4 code segment treat as an segment" />
+      <item index="5" class="java.lang.String" itemvalue="Mocha.2col article segments.5 code segment treat as an segment" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Mocha.2col article segments.&gt; text" />
-        <item index="1" class="java.lang.String" itemvalue="Mocha.2col article segments" />
-        <item index="2" class="java.lang.String" itemvalue="Mocha.2col article segments.1 code + 1p + 1c =&gt; 3 segment" />
-        <item index="3" class="java.lang.String" itemvalue="Mocha.2col article segments.1 segment article" />
-        <item index="4" class="java.lang.String" itemvalue="Mocha.2col article segments.empty article" />
+        <item index="0" class="java.lang.String" itemvalue="Mocha.2col article segments.5 code segment treat as an segment" />
+        <item index="1" class="java.lang.String" itemvalue="Mocha.2col article segments.3 code segment treat as an segment" />
+        <item index="2" class="java.lang.String" itemvalue="Mocha.2col article segments.4 code segment treat as an segment" />
+        <item index="3" class="java.lang.String" itemvalue="Mocha.2col article segments.&gt; text" />
+        <item index="4" class="java.lang.String" itemvalue="Mocha.2col article segments.2 code segment treat as an segment" />
       </list>
     </recent_temporary>
   </component>
@@ -339,57 +332,59 @@
       <workItem from="1512120915932" duration="885000" />
       <workItem from="1512548190694" duration="5372000" />
       <workItem from="1512610463315" duration="970000" />
-      <workItem from="1512611455860" duration="12436000" />
+      <workItem from="1512611455860" duration="12685000" />
+      <workItem from="1513667902628" duration="2593000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="2col_article_segments - 2017.12.07 at 15h 19m 27s.xml">
-      <configuration name="2col article segments" configurationId="mocha-javascript-test-runner" />
+    <history-entry file="2col_article_segments_3_code_segment_treat_as_an_segment - 2017.12.19 at 15h 46m 34s.xml">
+      <configuration name="2col article segments.3 code segment treat as an segment" configurationId="mocha-javascript-test-runner" />
     </history-entry>
-    <history-entry file="2col_article_segments_1_code_+_1p_+_1c_=__3_segment - 2017.12.07 at 15h 17m 44s.xml">
-      <configuration name="2col article segments.1 code + 1p + 1c =&gt; 3 segment" configurationId="mocha-javascript-test-runner" />
+    <history-entry file="2col_article_segments_3_code_segment_treat_as_an_segment - 2017.12.19 at 15h 47m 40s.xml">
+      <configuration name="2col article segments.3 code segment treat as an segment" configurationId="mocha-javascript-test-runner" />
     </history-entry>
-    <history-entry file="2col_article_segments_1_code_+_1p_+_1c_=__3_segment - 2017.12.07 at 15h 17m 57s.xml">
-      <configuration name="2col article segments.1 code + 1p + 1c =&gt; 3 segment" configurationId="mocha-javascript-test-runner" />
+    <history-entry file="2col_article_segments_4_code_segment_treat_as_an_segment - 2017.12.19 at 15h 47m 17s.xml">
+      <configuration name="2col article segments.4 code segment treat as an segment" configurationId="mocha-javascript-test-runner" />
     </history-entry>
-    <history-entry file="2col_article_segments___text - 2017.12.07 at 17h 50m 25s.xml">
-      <configuration name="2col article segments.&gt; text" configurationId="mocha-javascript-test-runner" />
+    <history-entry file="2col_article_segments_5_code_segment_treat_as_an_segment - 2017.12.19 at 15h 48m 29s.xml">
+      <configuration name="2col article segments.5 code segment treat as an segment" configurationId="mocha-javascript-test-runner" />
     </history-entry>
-    <history-entry file="2col_article_segments___text - 2017.12.07 at 17h 50m 44s.xml">
-      <configuration name="2col article segments.&gt; text" configurationId="mocha-javascript-test-runner" />
-    </history-entry>
-    <history-entry file="2col_article_segments___text - 2017.12.07 at 17h 50m 57s.xml">
-      <configuration name="2col article segments.&gt; text" configurationId="mocha-javascript-test-runner" />
-    </history-entry>
-    <history-entry file="test - 2017.12.07 at 14h 48m 29s.xml">
+    <history-entry file="test - 2017.12.19 at 15h 49m 22s.xml">
       <configuration name="test" configurationId="mocha-javascript-test-runner" />
     </history-entry>
-    <history-entry file="test - 2017.12.07 at 14h 48m 43s.xml">
+    <history-entry file="test - 2017.12.19 at 15h 49m 37s.xml">
       <configuration name="test" configurationId="mocha-javascript-test-runner" />
     </history-entry>
-    <history-entry file="test - 2017.12.07 at 14h 49m 07s.xml">
+    <history-entry file="test - 2017.12.19 at 15h 53m 35s.xml">
       <configuration name="test" configurationId="mocha-javascript-test-runner" />
     </history-entry>
-    <history-entry file="test - 2017.12.07 at 15h 06m 16s.xml">
+    <history-entry file="test - 2017.12.19 at 15h 54m 48s.xml">
+      <configuration name="test" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="test - 2017.12.19 at 15h 55m 25s.xml">
+      <configuration name="test" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="test - 2017.12.19 at 15h 55m 28s.xml">
       <configuration name="test" configurationId="mocha-javascript-test-runner" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19663000" />
+    <option name="totallyTimeSpent" value="22505000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="273" y="23" width="1591" height="933" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Key Promoter X" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38305488" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38305488" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2556488" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25887668" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -458,7 +453,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="15" column="5" lean-forward="false" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -466,7 +460,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -482,15 +475,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="54" lean-forward="false" selection-start-line="0" selection-start-column="54" selection-end-line="0" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/lexer.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="14" column="23" lean-forward="false" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -498,7 +482,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="21">
           <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -506,7 +489,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
           <caret line="208" column="21" lean-forward="false" selection-start-line="208" selection-start-column="21" selection-end-line="208" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -514,7 +496,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="63">
           <caret line="3" column="23" lean-forward="false" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -522,7 +503,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
           <caret line="12" column="31" lean-forward="false" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -538,7 +518,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="317">
           <caret line="52" column="20" lean-forward="false" selection-start-line="52" selection-start-column="20" selection-end-line="52" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -570,35 +549,48 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="437">
           <caret line="115" column="0" lean-forward="true" selection-start-line="115" selection-start-column="0" selection-end-line="115" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/lexer.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/segments.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="43" column="4" lean-forward="true" selection-start-line="43" selection-start-column="4" selection-end-line="43" selection-end-column="4" />
+        <state relative-caret-position="315">
+          <caret line="16" column="4" lean-forward="false" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/style/untitled">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TwoColArticle.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="452">
+          <caret line="56" column="29" lean-forward="false" selection-start-line="56" selection-start-column="29" selection-end-line="56" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/index.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="104" column="22" lean-forward="false" selection-start-line="104" selection-start-column="22" selection-end-line="104" selection-end-column="22" />
+        <state relative-caret-position="366">
+          <caret line="82" column="0" lean-forward="true" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
           <folding>
-            <marker date="1512640148000" expanded="true" signature="2250:2373" ph="..." />
-            <marker date="1512640148000" expanded="true" signature="2423:2542" ph="..." />
-            <marker date="1512640148000" expanded="true" signature="2532:2537" ph="..." />
+            <element signature="e#0#28#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TwoColArticle.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="102" column="0" lean-forward="true" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>

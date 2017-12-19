@@ -2,7 +2,7 @@ import Link from 'next/link'
 import * as React from 'react'
 
 import {Token, Tokens} from "marked";
-import {Links, Segment, TwoColArticle} from "../src/TwoColArticle";
+import {CompareSegment, Links, Segment, TwoColArticle} from "../src/TwoColArticle";
 
 type ToCompare = { left: string, right: string, leftLang?: string, rightLang?: string }
 //      style={{overflowWrap: "break-word"}}
@@ -81,22 +81,18 @@ for item in array:
 	print(item)
 \`\`\`
 
-
->有志者事竟成
+> 牛顿说 我站在巨人的肩膀上尿尿呢!
 
 `
 
-type CodeToCompare = [Tokens.Code, Tokens.Code]
-
-
-function isCodeToCompare(object: Segment): object is CodeToCompare {
-  return Array.isArray(object)
+function isCodeToCompare(object: Segment): object is CompareSegment {
+  return object.type === 'compare'
 }
 
 
 const SegmentContainer = ({segment, links}: { segment: Segment, links: Links }) => {
   if (isCodeToCompare(segment)) {
-    const [left, right] = segment
+    const [left, right] = segment.tokens
 
     return <Compare
       left={TwoColArticle.renderTokenToRawHtml(left, links)}
@@ -106,7 +102,7 @@ const SegmentContainer = ({segment, links}: { segment: Segment, links: Links }) 
       rightLang={right.lang}
     />
   } else {
-    return <div dangerouslySetInnerHTML={{__html: TwoColArticle.renderTokenToRawHtml(segment, links)}}></div>
+    return <div dangerouslySetInnerHTML={{__html: TwoColArticle.renderTokensToRawHtml(segment.tokens, links)}}></div>
   }
 }
 
