@@ -89,12 +89,7 @@ export default (props) => {
   const {frontmatter, internal: {content}} = post
 
   return <div className="site">
-    <Link to="/about">
-      About
-    </Link>
-    <h1>开始对比</h1>
-
+    <h1 className="text-5xl font-sans">{frontmatter.title}</h1>
     <Article md={content.replace(/---\n[\w\W]+---/, '')}/>
-
   </div>
 }
