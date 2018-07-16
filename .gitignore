@@ -60,3 +60,4 @@ typings/
 .env
 .next
 .cache
+public/
