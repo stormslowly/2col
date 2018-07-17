@@ -1,6 +1,11 @@
 import {Token, Tokens, TokensList} from "marked";
 import * as Marked from "marked";
-import Code = marked.Tokens.Code;
+
+interface Code {
+  type: 'code';
+  lang?: string;
+  text: string;
+}
 
 export type Links = {
   [key: string]: { href: string; title: string; }

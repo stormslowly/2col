@@ -1,7 +1,7 @@
 const path = require('path')
 
-exports.createPages = ({boundActionCreators, graphql}) => {
-  const {createPage} = boundActionCreators
+exports.createPages = ({actions, graphql}) => {
+  const {createPage} = actions
   const blogPostTemplate = path.resolve(`src/templates/post.tsx`)
 
   // If you are experiencing issues with the ordering of the posts on the homepage,
@@ -15,7 +15,6 @@ exports.createPages = ({boundActionCreators, graphql}) => {
 					internal{
             content
           }
-          id
           frontmatter {
             date
             path
