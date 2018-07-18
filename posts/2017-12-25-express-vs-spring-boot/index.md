@@ -3,7 +3,9 @@ path: "/happy-halloween"
 date: "2017-10-31T03:15:59.175Z"
 title: "express vs spring boot"
 tags: ['node.js', 'express', 'spring boot','java']
+titleImage: 'http://via.placeholder.com/350x150'
 excerpt: "express(node.js) web 开发框架和 Spring Boot(java)开发框架的简单对比"
+language: ['JavaScript','Java']
 ---
 
 `express` 是 `node.js` web 开发中目前最流行的 web 框架;目前在 node 社区中有着广泛的使用;
