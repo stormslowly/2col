@@ -32,7 +32,9 @@ app.get('/', function (req, res) {
 
 ```JavaScript
 const  array = []
-
+const  array = []
+const  array = []
+const  array = []
 ```
 
 

@@ -26,6 +26,7 @@ describe('2col article segments', () => {
     // language=Markdown
     const article = new TwoColArticle('# test \n```JavaScript\nconsole.log\n```')
     expect(article.segments).to.have.length(1)
+
   })
 
   it('2 code segment treat as an segment', () => {

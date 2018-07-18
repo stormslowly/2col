@@ -3,13 +3,17 @@ import {graphql} from 'gatsby'
 
 import {CompareSegment, Links, Segment, TwoColArticle} from "../TwoColArticle";
 
-type ToCompare = { left: string, right: string, leftLang?: string, rightLang?: string }
+type ToCompare = { leftText: string, rightText: string, leftLang?: string, rightLang?: string }
 //      style={{overflowWrap: "break-word"}}
 
-const Compare: React.StatelessComponent<ToCompare> = ({left, right, leftLang, rightLang}: ToCompare) => {
-  return <div className="flex border-b-2 bg-grey">
+import SyntaxHighlighter from 'react-syntax-highlighter/prism';
+
+
+const Compare: React.StatelessComponent<ToCompare> = ({leftText, rightText, leftLang, rightLang}: ToCompare) => {
+
+  return <div className="flex border-b-2 ">
     <div
-      className="w-1/2 relative"
+      className="left-code border-r-2 border-dashed border-grey-dark"
     >
 
       <span
@@ -17,17 +21,23 @@ const Compare: React.StatelessComponent<ToCompare> = ({left, right, leftLang, ri
       >
         {leftLang}
         </span>
-      <div className="pt-6 pb-3 bg-grey"
-           dangerouslySetInnerHTML={{__html: left}}
-      ></div>
-
+      <div className="pt-6 pb-3 "
+      >
+        <SyntaxHighlighter language={leftLang.toLowerCase()}>
+          {leftText}
+        </SyntaxHighlighter>
+      </div>
     </div>
-    <div className="w-1/2 relative bg-grey">
+
+    <div className="right-code">
       <span
         className="absolute pin-l pin-t bg-teal-dark rounded-full px-2"
       >{rightLang}</span>
-      <div className="pt-6 pb-3 bg-grey"
-           dangerouslySetInnerHTML={{__html: right}}></div>
+      <div className="pt-6 pb-3">
+        <SyntaxHighlighter language={rightLang.toLowerCase()}>
+          {rightText}
+        </SyntaxHighlighter>
+      </div>
     </div>
   </div>
 }
@@ -41,11 +51,13 @@ const SegmentContainer = ({segment, links}: { segment: Segment, links: Links }) 
   if (isCodeToCompare(segment)) {
     const [left, right] = segment.tokens
 
+    console.log(`${__filename}:45 SegmentContainer\n`, left);
+
     return <Compare
-      left={TwoColArticle.renderTokenToRawHtml(left, links)}
+      leftText={left.text}
       leftLang={left.lang}
 
-      right={TwoColArticle.renderTokenToRawHtml(right, links)}
+      rightText={right.text}
       rightLang={right.lang}
     />
   } else {
